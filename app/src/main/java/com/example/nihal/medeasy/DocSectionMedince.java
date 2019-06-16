@@ -183,9 +183,9 @@ public class DocSectionMedince extends AppCompatActivity implements DatePickerDi
     @Override
     public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
         if(flag==0) {
-            start_time.setText(dayOfMonth + "/" + month + "/" + year);
+            start_time.setText(dayOfMonth + "/" + month +1 + "/" + year);
         }else {
-            end_time.setText(dayOfMonth + "/" + month + "/" + year);
+            end_time.setText(dayOfMonth + "/" + month +1 + "/" + year);
         }
 
     }

@@ -10,6 +10,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.nihal.medeasy.Models.AssessmentSheetModel;
+import com.example.nihal.medeasy.Models.Drugs;
 
 public class AssessmentSheetAfterSecion extends AppCompatActivity {
 
@@ -152,6 +153,49 @@ public class AssessmentSheetAfterSecion extends AppCompatActivity {
             public void onClick(View view) {
                  startActivity(new Intent(AssessmentSheetAfterSecion.this,AssessmentSheet2AfterSecion.class));
              }
+        });
+
+        next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                final String addMedicine = yourComplaint.getText().toString();
+                final String barDay      = bar_day.getText().toString() ;
+                final String Dose        = dose.getText().toString();
+                final String startTime   = start_time.getText().toString() + "";
+                final String endTime     = end_time.getText().toString() + "" ;
+
+                if (addMedicine.isEmpty()) {
+
+                    add_Medicine.setError(" Enter Medicine Name ");
+
+                } else if (barDay.isEmpty()) {
+
+                    bar_day.setError("Enter hoe many times");
+
+                } else if (Dose.isEmpty()) {
+
+                    dose.setError("Enter dose of Medicine");
+
+                } else if (startTime.isEmpty()) {
+
+                    start_time.setError("Enter Starting Time of Medicine");
+
+                } else if (endTime.isEmpty()) {
+
+                    end_time.setError("Enter Ending Time of Medicine");
+
+                }else {
+
+                    Drugs drug = new Drugs(addMedicine
+                            , barDay
+                            , Dose
+                            , startTime
+                            , endTime);
+
+                    drugs.add(drug);
+                    adapter.notifyDataSetChanged();
+                }
+            }
         });
 
     }

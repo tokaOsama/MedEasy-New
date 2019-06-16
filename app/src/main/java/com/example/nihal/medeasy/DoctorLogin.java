@@ -88,7 +88,7 @@ public class DoctorLogin extends AppCompatActivity {
                             Log.d("ttt", "onDataChange: " + dataSnapshot.getValue());
                             if ((number + "@gmail.com").equals(dataSnapshot.getValue())) {
                                 myRef.child("" + dataSnap.getKey()).child("Info").child("Pass").setValue("" + random);
-                                finish();
+
                             }
                         }
 

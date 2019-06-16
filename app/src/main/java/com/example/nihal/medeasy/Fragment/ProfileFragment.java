@@ -77,7 +77,7 @@ public class ProfileFragment extends Fragment {
         age = view.findViewById(R.id.age);
         blood_type = view.findViewById(R.id.blood_type);
         relation = view.findViewById(R.id.relation);
-        //returnData();
+        returnData();
         draw_chart1();
         draw_chart2();
         RV = view.findViewById(R.id.RV);

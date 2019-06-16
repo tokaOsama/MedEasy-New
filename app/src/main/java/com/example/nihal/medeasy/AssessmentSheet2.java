@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import com.example.nihal.medeasy.Models.AssessmentSheetModel;
 import com.google.firebase.database.DatabaseReference;
@@ -44,7 +45,7 @@ public class AssessmentSheet2 extends AppCompatActivity {
     String level_of_consclousness, pulse_rates, pulse_rhythms, pulse_equalitys, peripheral_pulsation, chest_pain, head_and_neck_neck, ll_oedema1, ll_oedema2, ll_oedema3;
     FirebaseDatabase database1;
     DatabaseReference myRef1;
-    Button save;
+    TextView save;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
