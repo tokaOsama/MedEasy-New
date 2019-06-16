@@ -1,10 +1,10 @@
 package com.example.nihal.medeasy;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -45,7 +45,7 @@ public class AssessmentSheet2 extends AppCompatActivity {
     String level_of_consclousness, pulse_rates, pulse_rhythms, pulse_equalitys, peripheral_pulsation, chest_pain, head_and_neck_neck, ll_oedema1, ll_oedema2, ll_oedema3;
     FirebaseDatabase database1;
     DatabaseReference myRef1;
-    TextView save;
+    TextView save,  back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,9 +57,9 @@ public class AssessmentSheet2 extends AppCompatActivity {
         level_of_consclousness_V = findViewById(R.id.level_of_consclousness_V);
         level_of_consclousness_U = findViewById(R.id.level_of_consclousness_U);
         if (level_of_consclousness_A.isChecked()) {
-            level_of_consclousness = "1";
-        } else if (level_of_consclousness_P.isChecked()) {
             level_of_consclousness = "0";
+        } else if (level_of_consclousness_P.isChecked()) {
+            level_of_consclousness = "1";
         } else if (level_of_consclousness_V.isChecked()) {
             level_of_consclousness = "2";
         } else {
@@ -123,9 +123,18 @@ public class AssessmentSheet2 extends AppCompatActivity {
         } else {
             ll_oedema3 = "1";
         }
+
+
+        back = findViewById(R.id.back);
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(AssessmentSheet2.this,AssessmentSheet.class));
+            }
+        });
+
+
         save = findViewById(R.id.save);
-
-
         save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
