@@ -31,9 +31,7 @@ public class DoctorHome extends AppCompatActivity {
         docModel.add(new DoctorHomeModel("Medical History", 0));
         docModel.add(new DoctorHomeModel("Medicine", 1));
         docModel.add(new DoctorHomeModel("Analysis", 2));
-        docModel.add(new DoctorHomeModel("Profile", 3));
-        docModel.add(new DoctorHomeModel("Surgeries", 4));
-        docModel.add(new DoctorHomeModel("Medical Prescriptions", 5));
+        docModel.add(new DoctorHomeModel("Patient Profile", 3));
 
         doctorAdapter = new DoctorAdapter(docModel, this, new DoctorAdapter.OnItemClick() {
             @Override
@@ -50,13 +48,6 @@ public class DoctorHome extends AppCompatActivity {
 
                 }else if (position == 3) {
                     startActivity(new Intent(DoctorHome.this, DocSectionMedince.class));
-
-                }else if (position == 4) {
-                    startActivity(new Intent(DoctorHome.this, DocSectionMedince.class));
-
-                }else if (position == 5) {
-                    startActivity(new Intent(DoctorHome.this, DocSectionMedince.class));
-
                 }
             }
         });

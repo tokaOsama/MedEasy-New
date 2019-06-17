@@ -30,7 +30,6 @@
         <activity android:name=".LoginActivity">
 
         </activity>
-            android:screenOrientation="portrait" />
         <activity android:name=".SignupActivity" />
         <activity
             android:name=".AssessmentSheet"
@@ -44,13 +43,15 @@
         </activity>
         <activity android:name=".DoctorLogin" />
         <activity android:name=".startingPage" >
+
+        </activity>
+        <activity android:name=".DoctorHome">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".DoctorHome"></activity>
         <activity android:name=".DocSectionMedince">
         </activity>
         <activity android:name=".AssessmentSheetAfterSecion" >

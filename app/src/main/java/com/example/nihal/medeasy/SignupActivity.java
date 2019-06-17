@@ -69,6 +69,7 @@ public class SignupActivity extends AppCompatActivity {
                 } else {
                     gender = "1";
                 }
+
                 type = Hawk.get("type");
                  UserPhoneInFireB = Phone.getText().toString();
                 final String PassWordInFireB = PassWord.getText().toString();
